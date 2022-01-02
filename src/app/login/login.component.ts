@@ -25,14 +25,18 @@ export class LoginComponent implements OnInit {
   @Input()  user :UserModel = new UserModel();
 
   ngOnInit(): void {
-   let dd =  this.sharedService.getTest();
-   console.log(dd)
+
   }
 
   onLogin():void {
-    let dddd = this.sharedService.loginUser(this.user);
-    debugger
 
   }
+
+  onTest(): void{
+    this.sharedService.getTest().then((res: TestModel) =>{
+      this.login = res;
+    });
+  }
+
 
 }
