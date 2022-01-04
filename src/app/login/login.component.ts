@@ -3,6 +3,10 @@ import { FormsModule } from '@angular/forms';
 import {SharedService} from "../shared.service";
 import {UserModel} from "./service/models/user.model";
 import {Observable} from "rxjs";
+import {TestModel} from "./model/test.model";
+import {translateStatement} from "@angular/compiler-cli/src/ngtsc/translator";
+import {HttpClient} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-login',
@@ -12,18 +16,27 @@ import {Observable} from "rxjs";
 })
 export class LoginComponent implements OnInit {
 
+  public login: TestModel = new TestModel();
 
   constructor(
+    private http:HttpClient,
     private sharedService: SharedService
   ) {}
   @Input()  user :UserModel = new UserModel();
 
   ngOnInit(): void {
+
   }
 
   onLogin():void {
-    let test = this.user
-    this.sharedService.loginUser().subscribe(user => this.user = user);
+
   }
+
+  onTest(): void{
+    this.sharedService.getTest().then((res: TestModel) =>{
+      this.login = res;
+    });
+  }
+
 
 }
