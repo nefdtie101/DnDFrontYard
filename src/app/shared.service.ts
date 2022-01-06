@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {UserModel} from "./login/service/models/user.model";
 import {TestModel} from "./login/model/test.model";
 import {ReturnResult} from "./return-result";
+import {TokenModel} from "./login/model/token.model";
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +12,9 @@ export class SharedService {
 
 
   constructor(private http:HttpClient) { }
-  loginUser(val :UserModel){
-    return this.http.post("http://localhost:5000/api/auth/Login",val)
+   async loginUser(val :UserModel) : Promise<TokenModel>{
+    return  this.http.post<TokenModel>('http://localhost:5000/api/auth/Login', {
+      headers : new HttpHeaders().set('content-type','application/json')}).toPromise();
   }
 
 
