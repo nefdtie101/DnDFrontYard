@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {SharedService} from "../shared.service";
-import {UserModel} from "./service/models/user.model";
+import {UserModel} from "./model/user.model";
 import {Observable} from "rxjs";
 import {TestModel} from "./model/test.model";
 import {translateStatement} from "@angular/compiler-cli/src/ngtsc/translator";
@@ -30,12 +30,11 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(username:string, password:string):void {
-    console.log(username, password);
     this.user.UserName = username;
     this.user.Password = password;
     this.sharedService.loginUser(this.user).then(
       (res: TokenModel) =>{
-        console.log(this.sharedService.loginUser(this.user));
+        localStorage.setItem('jwt',res.token);
       }
     )
 
