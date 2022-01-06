@@ -15,7 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {Routes, RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
-import {UserModel} from "./login/service/models/user.model";
+import {UserModel} from "./login/model/user.model";
 @NgModule({
   declarations: [
     AppComponent,
