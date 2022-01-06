@@ -20,9 +20,9 @@ export class SharedService {
   }
 
 
-  async getTest(): Promise<TestModel> {
-    return  this.http.get<TestModel>('http://localhost:5000/Test', {
-        headers : new HttpHeaders().set('content-type','application/json')}).toPromise();
+  async getTest(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+        headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
   }
 
 }

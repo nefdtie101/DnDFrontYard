@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
   }
 
   onTest(): void{
-    this.sharedService.getTest().then((res: TestModel) =>{
-      this.login = res;
+    this.sharedService.getTest().then((res: string) =>{
+      console.log("res")
     });
   }
 
