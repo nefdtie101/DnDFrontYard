@@ -7,14 +7,14 @@ import {TestModel} from "./model/test.model";
 import {translateStatement} from "@angular/compiler-cli/src/ngtsc/translator";
 import {HttpClient} from "@angular/common/http";
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-
 })
+
 export class LoginComponent implements OnInit {
+  username: string = '';
 
   public login: TestModel = new TestModel();
 
@@ -28,8 +28,11 @@ export class LoginComponent implements OnInit {
 
   }
 
-  onLogin():void {
-
+  onLogin(username:string, password:string):void {
+    console.log(username, password);
+    this.user.UserName = username;
+    this.user.Password = password;
+    console.log(this.sharedService.loginUser(this.user));
   }
 
   onTest(): void{
