@@ -16,6 +16,7 @@ import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {Routes, RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import {UserModel} from "./login/model/user.model";
+import { NewUserComponent } from './new-user/new-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import {UserModel} from "./login/model/user.model";
     NotesComponent,
     NpcComponent,
     LoginComponent,
+    NewUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import {UserModel} from "./login/model/user.model";
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule
+
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

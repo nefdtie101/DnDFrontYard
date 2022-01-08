@@ -1,14 +1,32 @@
+<script src="app.component.spec.ts"></script>
 <router-outlet></router-outlet>
+<button routerLink="UserProfile"
+        class="style" Button>Profile</button>
+<button routerLink="home"
+        class="style" Button>Backyard D&D</button>
+<button routerLink="Narrative"
+        class="style" Button>Narrative</button>
+<button routerLink="Notes"
+        class="style" Button>Notes</button>
+<button routerLink="NPC"
+        class="style" Button>NPC</button>
+<button routerLink="Items"
+        class="style" Button>Items</button>
+<button routerLink="MonsterIndex"
+        class="style" Button>MonsterIndex</button>
+<button routerLink="Stats"
+        class="style" Button>Stats</button>
+<button routerLink="Spells"
+        class="style" Button>Spells</button>
 <div class="container">
   <h3 class="style">Welcome to backyard D&D</h3>
   <h5 class="style">Good luck and have fun</h5>
-  <nav class="style">
-    <ul class="style">
-      <li class="style">
-        <button routerLink="login"
-                class="style" Button>Login</button>
-      </li>
-    </ul>
-  </nav>
+  <button routerLink="login"
+          class="style" Button>Login</button>
   <router-outlet></router-outlet>
 </div>
+<p><button (click)="modalService.open('NewCharacter')">Open Modal</button></p>
+<jw-modal id="NewCharacter">
+  <p>some modal text</p>
+  <p><button (click)="modalService.close('NewCharacter')">close Modal</button></p>
+</jw-modal>
