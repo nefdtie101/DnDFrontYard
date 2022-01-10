@@ -2,14 +2,14 @@
 
 import { ModalService } from './modal.service';
 
-@Component({ 
-    selector: 'jw-modal', 
-    templateUrl: 'modal.component.html', 
+@Component({
+    selector: 'jw-modal',
+    templateUrl: 'modal.component.html',
     styleUrls: ['modal.component.less'],
     encapsulation: ViewEncapsulation.None
 })
 export class ModalComponent implements OnInit, OnDestroy {
-    @Input() id: string;
+    @Input() id: string = "";
     private element: any;
 
     constructor(private modalService: ModalService, private el: ElementRef) {
@@ -26,15 +26,19 @@ export class ModalComponent implements OnInit, OnDestroy {
         // move element to bottom of page (just before </body>) so it can be displayed above everything else
         document.body.appendChild(this.element);
 
-        // close modal on background click
-        this.element.addEventListener('click', el => {
-            if (el.target.className === 'jw-modal') {
-                this.close();
-            }
-        });
+
 
         // add self (this modal instance) to the modal service so it's accessible from controllers
         this.modalService.add(this);
+    }
+
+    ngAfterViewInit(): void {
+      document.onclick = (args: any) : void => {
+        let currentTarget = args.target.closest('ejs-dialog, button');
+        if(currentTarget === null) {
+          this.modalService.close('NewCharacter');
+        }
+      }
     }
 
     // remove self from modal service when component is destroyed
