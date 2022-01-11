@@ -7,7 +7,6 @@ import {TestModel} from "./model/test.model";
 import {translateStatement} from "@angular/compiler-cli/src/ngtsc/translator";
 import {HttpClient} from "@angular/common/http";
 import {TokenModel} from "./model/token.model";
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,9 +15,7 @@ import {TokenModel} from "./model/token.model";
 
 export class LoginComponent implements OnInit {
   username: string = '';
-
   public login: TestModel = new TestModel();
-
   constructor(
     private http:HttpClient,
     private sharedService: SharedService
@@ -48,3 +45,4 @@ export class LoginComponent implements OnInit {
 
 
 }
+

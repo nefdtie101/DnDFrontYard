@@ -1,10 +1,18 @@
+<ng-template #content let-modal>
+  ...
+</ng-template>
 <router-outlet></router-outlet>
+<button routerLink="NewUser"
+        class="style" Button>Create New User</button>
 <div>
   <h2>{{login.testString}}</h2>
   <input  type="text"  id="username" [(ngModel)]="user.UserName"  name="username" #username  placeholder="UserName"/>
   <input  type="text"  id="password" [(ngModel)]="user.Password"  name="password" #password  placeholder="Password"/>
   <button (click)="onLogin(username.value, password.value)"  >Login</button>
   <button (click)="onTest()"  >test</button>
+  <button (click)="onTest()"  >test</button>
 </div>
-
 <router-outlet></router-outlet>
+
+
+
