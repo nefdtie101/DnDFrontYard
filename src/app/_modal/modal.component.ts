@@ -32,15 +32,6 @@ export class ModalComponent implements OnInit, OnDestroy {
         this.modalService.add(this);
     }
 
-    ngAfterViewInit(): void {
-      document.onclick = (args: any) : void => {
-        let currentTarget = args.target.closest('ejs-dialog, button');
-        if(currentTarget === null) {
-          this.modalService.close('NewCharacter');
-        }
-      }
-    }
-
     // remove self from modal service when component is destroyed
     ngOnDestroy(): void {
         this.modalService.remove(this.id);

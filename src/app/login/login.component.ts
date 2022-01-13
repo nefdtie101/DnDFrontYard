@@ -7,6 +7,7 @@ import {TestModel} from "./model/test.model";
 import {translateStatement} from "@angular/compiler-cli/src/ngtsc/translator";
 import {HttpClient} from "@angular/common/http";
 import {TokenModel} from "./model/token.model";
+import { ModalService } from '../_modal';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,7 +26,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
   onLogin(username:string, password:string):void {
     this.user.UserName = username;
     this.user.Password = password;

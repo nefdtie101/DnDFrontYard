@@ -1,32 +1,155 @@
 <script src="app.component.spec.ts"></script>
 <router-outlet></router-outlet>
-<button routerLink="UserProfile"
-        class="style" Button>Profile</button>
-<button routerLink="home"
-        class="style" Button>Backyard D&D</button>
-<button routerLink="Narrative"
-        class="style" Button>Narrative</button>
-<button routerLink="Notes"
-        class="style" Button>Notes</button>
-<button routerLink="NPC"
-        class="style" Button>NPC</button>
-<button routerLink="Items"
-        class="style" Button>Items</button>
-<button routerLink="MonsterIndex"
-        class="style" Button>MonsterIndex</button>
-<button routerLink="Stats"
-        class="style" Button>Stats</button>
-<button routerLink="Spells"
-        class="style" Button>Spells</button>
-<div class="container">
-  <h3 class="style">Welcome to backyard D&D</h3>
-  <h5 class="style">Good luck and have fun</h5>
-  <button routerLink="login"
-          class="style" Button>Login</button>
-  <router-outlet></router-outlet>
-</div>
 <p><button (click)="modalService.open('NewCharacter')">Open Modal</button></p>
 <jw-modal id="NewCharacter">
-  <p>some modal text</p>
-  <p><button (click)="modalService.close('NewCharacter')">close Modal</button></p>
+  <label>Flaws</label>
+  <input type="text" id="Flaws" name="Flaws" required
+         minlength="1" maxlength="2">
+  <label>Ideals</label>
+  <input type="text" id="Ideals" name="Ideals" required
+         minlength="1" maxlength="2"><br>
+  <label>CharacterName</label>
+  <input type="text" id="CharacterName" name="CharacterName" required
+         minlength="1" maxlength="2">
+  <label>  Class</label>
+  <input type="text" id="Class" name=" Class" required
+         minlength="1" maxlength="2"><br>
+  <label>CurrentLevel</label>
+  <input type="text" id="CurrentLevel" name="CurrentLevel" required
+         minlength="1" maxlength="2">
+  <label>Background</label>
+  <input type="text" id="Background" name="Background" required
+         minlength="1" maxlength="2"><br>
+  <label>Race</label>
+  <input type="text" id="Race" name="Race" required
+         minlength="1" maxlength="2">
+  <label>Alignment</label>
+  <input type="text" id="Alignment" name="Alignment" required
+         minlength="1" maxlength="2"><br>
+  <label>Experience</label>
+  <input type="text" id="Experience" name="Experience" required
+         minlength="1" maxlength="2">
+  <label>ProfBonus</label>
+  <input type="text" id="ProfBonus" name="ProfBonus" required
+         minlength="1" maxlength="2"><br>
+  <label>Inspiration</label>
+  <input type="text" id="Inspiration" name="Inspiration" required
+         minlength="1" maxlength="2">
+  <label>Armor</label>
+  <input type="text" id="Armor" name="Armor" required
+         minlength="1" maxlength="2"><br>
+  <label>Speed</label>
+  <input type="text" id="Speed" name="Speed" required
+         minlength="1" maxlength="2">
+  <label>Initiative</label>
+  <input type="text" id="Initiative" name="Initiative" required
+         minlength="1" maxlength="2"><br>
+  <label>PassivePerception</label>
+  <input type="text" id="PassivePerception" name="PassivePerception" required
+         minlength="1" maxlength="2">
+  <label>TempHP</label>
+  <input type="text" id="TempHP" name="TempHP" required
+         minlength="1" maxlength="2"><br>
+  <label>HP</label>
+  <input type="text" id="HP" name="HP" required
+         minlength="1" maxlength="2">
+  <label>SpellsSkills</label>
+  <input type="text" id="SpellsSkills" name="SpellsSkills" required
+         minlength="1" maxlength="2"><br>
+  <label>STR</label>
+  <input type="text" id="STR" name="STR" required
+         minlength="1" maxlength="2">
+  <label>STRSave</label>
+  <input type="text" id="STRSave" name="STRSave" required
+         minlength="1" maxlength="2"><br>
+  <label>Athletics</label>
+  <input type="text" id="Athletics" name="Athletics" required
+         minlength="1" maxlength="2">
+  <label>DEX</label>
+  <input type="text" id="DEX" name="DEX" required
+         minlength="1" maxlength="2"><br>
+  <label>DEXSave</label>
+  <input type="text" id="DEXSave" name="DEXSave" required
+         minlength="1" maxlength="2">
+  <label>INTeligence</label>
+  <input type="text" id="INTeligence" name="INTeligence" required
+         minlength="1" maxlength="2"><br>
+  <label>INTSave</label>
+  <input type="text" id="INTSave" name="INTSave" required
+         minlength="1" maxlength="2">
+  <label>Acrobatics</label>
+  <input type="text" id="Acrobatics" name="Acrobatics" required
+         minlength="1" maxlength="2"><br>
+  <label> SleightOfHand</label>
+  <input type="text" id="SleightOfHand" name="SleightOfHand" required
+         minlength="1" maxlength="2">
+  <label>Stealth</label>
+  <input type="text" id="Stealth" name="Stealth" required
+         minlength="1" maxlength="2"><br>
+  <label>CON</label>
+  <input type="text" id="CON" name="CON" required
+         minlength="1" maxlength="2">
+  <label>CONSave</label>
+  <input type="text" id="CONSave" name="CONSave" required
+         minlength="1" maxlength="2"><br>
+  <label>Arcana</label>
+  <input type="text" id="Arcana" name="Arcana" required
+         minlength="1" maxlength="2">
+  <label>History</label>
+  <input type="text" id="History" name="History" required
+         minlength="1" maxlength="2"><br>
+  <label>Nature</label>
+  <input type="text" id="Nature" name="Nature" required
+         minlength="1" maxlength="2">
+  <label>Religion</label>
+  <input type="text" id="Religion" name="Religion" required
+         minlength="1" maxlength="2"><br>
+  <label>WIS</label>
+  <input type="text" id="WIS" name="WIS" required
+         minlength="1" maxlength="2">
+  <label>WISSave</label>
+  <input type="text" id="WISSave" name="WISSave" required
+         minlength="1" maxlength="2"><br>
+  <label>AnimalHandling</label>
+  <input type="text" id="AnimalHandling" name="AnimalHandling" required
+         minlength="1" maxlength="2">
+  <label>Insight</label>
+  <input type="text" id="Insight" name="Insight" required
+         minlength="1" maxlength="2"><br>
+  <label>Medicine</label>
+  <input type="text" id="Medicine" name="Medicine" required
+         minlength="1" maxlength="2">
+  <label>Perception</label>
+  <input type="text" id="Perception" name="Perception" required
+         minlength="1" maxlength="2"><br>
+  <label>Survival</label>
+  <input type="text" id="Survival" name="Survival" required
+         minlength="1" maxlength="2">
+  <label>CHA</label>
+  <input type="text" id="CHA" name="CHA" required
+         minlength="1" maxlength="2"><br>
+  <label>CHASave</label>
+  <input type="text" id="CHASave" name="CHASave" required
+         minlength="1" maxlength="2">
+  <label>Deception</label>
+  <input type="text" id="Deception" name="Deception" required
+         minlength="1" maxlength="2"><br>
+  <label>Intimidation</label>
+  <input type="text" id="Intimidation" name="Intimidation" required
+         minlength="1" maxlength="2">
+  <label>Persuasion</label>
+  <input type="text" id="Persuasion" name="Persuasion" required
+         minlength="1" maxlength="2"><br>
+  <label> PersonalityTraits</label>
+  <input type="text" id="PersonalityTraits" name=" PersonalityTraits" required
+         minlength="1" maxlength="2">
+  <label>EquipmentIDs</label>
+  <input type="text" id="EquipmentIDs" name="EquipmentIDs" required
+         minlength="1" maxlength="2"><br>
+  <label>PhotoPath</label>
+  <input type="text" id="PhotoPath" name="PhotoPath" required
+         minlength="1" maxlength="2">
+  <button (click)="modalService.close('NewCharacter')">close Modal</button>
 </jw-modal>
+
+

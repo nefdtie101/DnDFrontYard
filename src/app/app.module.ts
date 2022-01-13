@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {UserModel} from "./login/model/user.model";
 import { NewUserComponent } from './new-user/new-user.component';
 import {ModalModule} from "./_modal";
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import {ModalModule} from "./_modal";
     NpcComponent,
     LoginComponent,
     NewUserComponent,
+    HomeComponent,
   ],
     imports: [
         BrowserModule,

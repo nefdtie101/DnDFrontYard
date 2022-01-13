@@ -10,6 +10,7 @@ import {NpcComponent} from "./npc/npc.component";
 import {SpellsComponent} from "./spells/spells.component";
 import {ItemsComponent} from "./items/items.component";
 import {NewUserComponent} from "./new-user/new-user.component";
+import {HomeComponent} from "./home/home.component";
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'UserProfile', component: UserprofileComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'Items', component: ItemsComponent },
   { path: 'Notes', component: NotesComponent },
   { path: 'NewUser', component: NewUserComponent },
+  { path: 'Home', component: HomeComponent },
   { path: '',redirectTo: '/login', pathMatch: 'full' }
 ];
 @NgModule({
