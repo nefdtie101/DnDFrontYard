@@ -13,16 +13,16 @@ import {NewUserComponent} from "./new-user/new-user.component";
 import {HomeComponent} from "./home/home.component";
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'UserProfile', component: UserprofileComponent },
-  { path: 'Narrative', component: NarrativeComponent },
-  { path: 'MonsterIndex', component: MonsterindexComponent },
-  { path: 'Stats', component: StatsComponent },
-  { path: 'NPC', component: NpcComponent },
-  { path: 'Spells', component: SpellsComponent },
-  { path: 'Items', component: ItemsComponent },
-  { path: 'Notes', component: NotesComponent },
-  { path: 'NewUser', component: NewUserComponent },
-  { path: 'Home', component: HomeComponent },
+  { path: 'userProfile', component: UserprofileComponent },
+  { path: 'narrative', component: NarrativeComponent },
+  { path: 'monsterIndex', component: MonsterindexComponent },
+  { path: 'stats', component: StatsComponent },
+  { path: 'npc', component: NpcComponent },
+  { path: 'spells', component: SpellsComponent },
+  { path: 'items', component: ItemsComponent },
+  { path: 'notes', component: NotesComponent },
+  { path: 'newUser', component: NewUserComponent },
+  { path: 'home', component: HomeComponent },
   { path: '',redirectTo: '/login', pathMatch: 'full' }
 ];
 @NgModule({
