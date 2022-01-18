@@ -1,0 +1,52 @@
+export class SubStats {
+  public STRSave?:number;
+  public Athletics?:number;
+  public DEXSave?:number;
+  public INTSave?:number;
+  public Acrobatics?:number;
+  public SleightOfHand?:number;
+  public Stealth?:number;
+  public CONSave?:number;
+  public Arcana?:number;
+  public History?:number;
+  public Investigation?:number;
+  public Nature?:number;
+  public Religion?:number;
+  public WISSave?:number;
+  public AnimalHandling?:number;
+  public Insight?:number;
+  public Medicine?:number;
+  public Perception?:number;
+  public Survival?:number;
+  public CHASave?:number;
+  public Deception?:number;
+  public Intimidation?:number;
+  public Performance?:number;
+  public Persuasion?:number;
+  constructor() {
+    this.STRSave=0;
+    this.Athletics=0;
+    this.DEXSave=0;
+    this.INTSave=0;
+    this.Acrobatics=0;
+    this.SleightOfHand=0;
+    this.Stealth=0;
+    this.CONSave=0;
+    this.Arcana=0;
+    this.History=0;
+    this.Investigation=0;
+    this.Nature=0;
+    this.Religion=0;
+    this.WISSave=0;
+    this.AnimalHandling=0;
+    this.Insight=0;
+    this.Medicine=0;
+    this.Perception=0;
+    this.Survival=0;
+    this.CHASave=0;
+    this.Deception=0;
+    this.Intimidation=0;
+    this.Performance=0;
+    this.Persuasion=0;
+  }
+}
