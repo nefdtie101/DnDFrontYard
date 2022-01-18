@@ -19,10 +19,41 @@ export class SharedService {
       headers : new HttpHeaders().set('content-type','application/json')}).toPromise();
   }
 
-
-  async getTest(): Promise<string> {
+  async getStats(): Promise<string> {
     return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
         headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
   }
 
+  async getNarrative(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+
+  async getNotes(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+
+  async getNpc(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+
+  async getItems(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+
+  async getAnimal(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+  async getSpells(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
+  async getTest(): Promise<string> {
+    return  this.http.get<string>(`http://localhost:5000/api/auth/test`, {
+      headers : new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem('jwt')}`)}).toPromise();
+  }
 }
