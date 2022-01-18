@@ -8,7 +8,9 @@ import {SharedService} from "../shared.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private sharedService: SharedService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   onNarrative(): void{
-    this.sharedService.getNarative().then((res: string) =>{
+    this.sharedService.getNarrative().then((res: string) =>{
     });
   }
 
@@ -44,17 +46,17 @@ export class HomeComponent implements OnInit {
   }
 
   onAnimal(): void{
-    this.sharedService.getAnimals().then((res: string) =>{
+    this.sharedService.getAnimal().then((res: string) =>{
     });
   }
 
   onStats(): void{
-    this.sharedService.getTest().then((res: string) =>{
+    this.sharedService.getStats().then((res: string) =>{
     });
   }
 
   onSpells(): void{
-    this.sharedService.getTest().then((res: string) =>{
+    this.sharedService.getSpells().then((res: string) =>{
     });
   }
 
