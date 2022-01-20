@@ -57,6 +57,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "dist => dist"
     publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
