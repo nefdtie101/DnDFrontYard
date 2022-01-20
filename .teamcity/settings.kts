@@ -57,7 +57,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = "dist => dist"
+    artifactRules = "dist/dnd-Frontend => dist/dnd-Frontend"
     publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
