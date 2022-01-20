@@ -1,5 +1,5 @@
 export class Campaign{
-  public CampaingName?:string;
+  public CampaignName?:string;
   public DungeonMasterID?:number;
   public PlayerIDs?:string;
   public Intro?:string;
@@ -7,7 +7,7 @@ export class Campaign{
   public NPCTable?:number;
   public MonsterTable?:number;
   constructor() {
-    this.CampaingName ="";
+    this.CampaignName ="";
     this.DungeonMasterID =0;
     this.PlayerIDs ="";
     this.Intro="";

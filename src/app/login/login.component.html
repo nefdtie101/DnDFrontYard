@@ -1,3 +1,4 @@
+<script src="model/user.model.ts"></script>
 <ng-template #content let-modal>
   ...
 </ng-template>
@@ -7,7 +8,20 @@
   <input  type="text"  id="username" [(ngModel)]="user.UserName"  name="username" #username  placeholder="UserName"/>
   <input  type="text"  id="password" [(ngModel)]="user.Password"  name="password" #password  placeholder="Password"/>
   <button (click)="onLogin(username.value, password.value)"  >Login</button>
+  <button (click)="modalService.open('CreateAccount')">Create Account</button>
+   <jw-modal id="CreateAccount">
+     <input  type="text"  id="newusername" [(ngModel)]="user.UserName"  name="newusername" #username  placeholder="Username"/>
+     <input  type="text"  id="newpassword" [(ngModel)]="user.Password"  name="newpassword" #password placeholder="Password"/>
+     <input  type="text"  id="passwordcheck" name="passwordcheck" placeholder="Confirm Password"/>
+     <select name="role" id="role">
+       <option value="GameMaster">Game Master</option>
+       <option value="Player">Player</option>
+       <option value="Spectator">Spectator</option>
+     </select>
+     <button (click)="onCreateAccount(username.value, password.value, roles.value)">Create account</button>
+     <button (click)="modalService.close('CreateAccount')">Cancel</button>
+   </jw-modal>
   <button (click)="onTest()"  >test</button>
   <button (click)="onTest()"  >test</button>
-</div>
 
+</div>
